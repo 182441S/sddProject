@@ -24,6 +24,11 @@
 		D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42F0BC524BEBF77009AB5ED /* Request.storyboard */; };
 		D43E168A24AC4B8000933FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43E168924AC4B8000933FD9 /* Assets.xcassets */; };
 		D43E168C24AC4D0200933FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E168B24AC4D0200933FD9 /* Main.storyboard */; };
+		D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */; };
+		D45AAC8924BEC21000B8A54B /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */; };
+		D45AAC8B24BEC21700B8A54B /* WishlistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8A24BEC21700B8A54B /* WishlistDetailViewController.swift */; };
+		D45AAC8D24BEC21D00B8A54B /* WishlistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */; };
+		D45AAC8F24BEC25800B8A54B /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45AAC8E24BEC25800B8A54B /* Wishlist.storyboard */; };
 		D496F8B624AC2A40001A0B74 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D496F8B524AC2A40001A0B74 /* Donation.storyboard */; };
 		D496F8BF24AC2A5B001A0B74 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */; };
 		D496F8C024AC2A5B001A0B74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */; };
@@ -60,6 +65,11 @@
 		D42F0BC524BEBF77009AB5ED /* Request.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
 		D43E168924AC4B8000933FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D43E168B24AC4D0200933FD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		D45AAC8A24BEC21700B8A54B /* WishlistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistDetailViewController.swift; sourceTree = "<group>"; };
+		D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistDataManager.swift; sourceTree = "<group>"; };
+		D45AAC8E24BEC25800B8A54B /* Wishlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
 		D496F8B524AC2A40001A0B74 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +118,7 @@
 		D42DF94224BE957800C12B38 /* Data Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */,
 				D417297524B55EDD00FE223F /* DataManager.swift */,
 			);
 			path = "Data Managers";
@@ -130,6 +141,9 @@
 		D42DF94424BE959600C12B38 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D45AAC8A24BEC21700B8A54B /* WishlistDetailViewController.swift */,
+				D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */,
+				D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */,
 				D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */,
 				D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */,
 				D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */,
@@ -188,6 +202,7 @@
 				D42DF94324BE958E00C12B38 /* Models */,
 				D42DF94224BE957800C12B38 /* Data Managers */,
 				D43E168924AC4B8000933FD9 /* Assets.xcassets */,
+				D45AAC8E24BEC25800B8A54B /* Wishlist.storyboard */,
 				D42F0BC524BEBF77009AB5ED /* Request.storyboard */,
 				D4FA868524A9C11C005E2177 /* AppDelegate.swift */,
 				D4FA868724A9C11C005E2177 /* SceneDelegate.swift */,
@@ -270,6 +285,7 @@
 				D4FA869E24A9CF04005E2177 /* Home.storyboard in Resources */,
 				D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */,
 				D496F8B624AC2A40001A0B74 /* Donation.storyboard in Resources */,
+				D45AAC8F24BEC25800B8A54B /* Wishlist.storyboard in Resources */,
 				D43E168C24AC4D0200933FD9 /* Main.storyboard in Resources */,
 				D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */,
 				D43E168A24AC4B8000933FD9 /* Assets.xcassets in Resources */,
@@ -332,6 +348,7 @@
 				D496F8C124AC2A5B001A0B74 /* ItemTableViewCell.swift in Sources */,
 				D42F0BC424BEBA0C009AB5ED /* RequestItemTableViewCell.swift in Sources */,
 				D496F8D324AC4106001A0B74 /* ProfileViewController.swift in Sources */,
+				D45AAC8B24BEC21700B8A54B /* WishlistDetailViewController.swift in Sources */,
 				D4A745F824B2F2D0002385EE /* ItemDetailViewController.swift in Sources */,
 				D42F0BC124BEBA0C009AB5ED /* RequestItemCell.swift in Sources */,
 				D496F8C324AC2A5B001A0B74 /* Register.swift in Sources */,
@@ -339,13 +356,16 @@
 				D42F0BBC24BEBA0C009AB5ED /* RequestViewController.swift in Sources */,
 				D4FA868624A9C11C005E2177 /* AppDelegate.swift in Sources */,
 				D496F8C024AC2A5B001A0B74 /* LoginViewController.swift in Sources */,
+				D45AAC8924BEC21000B8A54B /* WishlistViewController.swift in Sources */,
 				D4DC9F2F24AC388800AF8CC5 /* Slide.swift in Sources */,
 				D40EBAF424AC23AE00E4C30D /* Item.swift in Sources */,
 				D417297624B55EDD00FE223F /* DataManager.swift in Sources */,
 				D4FA868824A9C11C005E2177 /* SceneDelegate.swift in Sources */,
 				D496F8C424AC2A5B001A0B74 /* Login.swift in Sources */,
+				D45AAC8D24BEC21D00B8A54B /* WishlistDataManager.swift in Sources */,
 				D42F0BC024BEBA0C009AB5ED /* RequestInfoViewController.swift in Sources */,
 				D42F0BC224BEBA0C009AB5ED /* RequestItemViewController.swift in Sources */,
+				D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */,
 				D42F0BBB24BEBA0C009AB5ED /* RequestedItemsViewController.swift in Sources */,
 				D496F8BF24AC2A5B001A0B74 /* DonationViewController.swift in Sources */,
 			);
