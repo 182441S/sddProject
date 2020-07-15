@@ -12,7 +12,6 @@
 		D417296224B5520100FE223F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A745FA24B30627002385EE /* libsqlite3.tbd */; };
 		D417297624B55EDD00FE223F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417297524B55EDD00FE223F /* DataManager.swift */; };
 		D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D417297B24B57B4900FE223F /* GoogleService-Info.plist */; };
-		D42DF94724BE994300C12B38 /* WishlistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42DF94624BE994300C12B38 /* WishlistDetailViewController.swift */; };
 		D42DF94924BE99DD00C12B38 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42DF94824BE99DD00C12B38 /* Request.swift */; };
 		D42F0BBB24BEBA0C009AB5ED /* RequestedItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */; };
 		D42F0BBC24BEBA0C009AB5ED /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */; };
@@ -32,8 +31,6 @@
 		D496F8C224AC2A5B001A0B74 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D496F8BA24AC2A5B001A0B74 /* Login.storyboard */; };
 		D496F8C324AC2A5B001A0B74 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8BB24AC2A5B001A0B74 /* Register.swift */; };
 		D496F8C424AC2A5B001A0B74 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8BC24AC2A5B001A0B74 /* Login.swift */; };
-		D496F8C524AC2A5B001A0B74 /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D496F8BD24AC2A5B001A0B74 /* Wishlist.storyboard */; };
-		D496F8C624AC2A5B001A0B74 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8BE24AC2A5B001A0B74 /* WishlistViewController.swift */; };
 		D496F8D224AC4106001A0B74 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D496F8CE24AC4106001A0B74 /* Profile.storyboard */; };
 		D496F8D324AC4106001A0B74 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */; };
 		D4A745F824B2F2D0002385EE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */; };
@@ -42,7 +39,6 @@
 		D4DC9F3324AC38F900AF8CC5 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DC9F3224AC38F900AF8CC5 /* Slide.xib */; };
 		D4FA868624A9C11C005E2177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA868524A9C11C005E2177 /* AppDelegate.swift */; };
 		D4FA868824A9C11C005E2177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA868724A9C11C005E2177 /* SceneDelegate.swift */; };
-		D4FA869C24A9C7B5005E2177 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA869B24A9C7B5005E2177 /* LandingPageViewController.swift */; };
 		D4FA869E24A9CF04005E2177 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FA869D24A9CF04005E2177 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +48,6 @@
 		D40EBAF324AC23AE00E4C30D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D417297524B55EDD00FE223F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D417297B24B57B4900FE223F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D42DF94624BE994300C12B38 /* WishlistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistDetailViewController.swift; sourceTree = "<group>"; };
 		D42DF94824BE99DD00C12B38 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedItemsViewController.swift; sourceTree = "<group>"; };
 		D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
@@ -72,8 +67,6 @@
 		D496F8BA24AC2A5B001A0B74 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D496F8BB24AC2A5B001A0B74 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D496F8BC24AC2A5B001A0B74 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		D496F8BD24AC2A5B001A0B74 /* Wishlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
-		D496F8BE24AC2A5B001A0B74 /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		D496F8CE24AC4106001A0B74 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +79,6 @@
 		D4FA868524A9C11C005E2177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4FA868724A9C11C005E2177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4FA869524A9C11D005E2177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4FA869B24A9C7B5005E2177 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		D4FA869D24A9CF04005E2177 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FB23D3387A469445A3A22178 /* Pods-sddProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sddProject.debug.xcconfig"; path = "Target Support Files/Pods-sddProject/Pods-sddProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,13 +130,10 @@
 		D42DF94424BE959600C12B38 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D42DF94624BE994300C12B38 /* WishlistDetailViewController.swift */,
-				D496F8BE24AC2A5B001A0B74 /* WishlistViewController.swift */,
 				D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */,
 				D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */,
 				D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */,
 				D4DC233424BC2D9200E6F331 /* TempAddItemViewController.swift */,
-				D4FA869B24A9C7B5005E2177 /* LandingPageViewController.swift */,
 				D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */,
 				D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */,
 				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
@@ -207,7 +196,6 @@
 				D496F8CE24AC4106001A0B74 /* Profile.storyboard */,
 				D496F8B524AC2A40001A0B74 /* Donation.storyboard */,
 				D496F8BA24AC2A5B001A0B74 /* Login.storyboard */,
-				D496F8BD24AC2A5B001A0B74 /* Wishlist.storyboard */,
 				D4FA869D24A9CF04005E2177 /* Home.storyboard */,
 				D4DC9F3224AC38F900AF8CC5 /* Slide.xib */,
 				D417297B24B57B4900FE223F /* GoogleService-Info.plist */,
@@ -279,7 +267,6 @@
 			files = (
 				D496F8D224AC4106001A0B74 /* Profile.storyboard in Resources */,
 				D496F8C224AC2A5B001A0B74 /* Login.storyboard in Resources */,
-				D496F8C524AC2A5B001A0B74 /* Wishlist.storyboard in Resources */,
 				D4FA869E24A9CF04005E2177 /* Home.storyboard in Resources */,
 				D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */,
 				D496F8B624AC2A40001A0B74 /* Donation.storyboard in Resources */,
@@ -341,8 +328,6 @@
 			files = (
 				D42F0BBE24BEBA0C009AB5ED /* RequestedItems.swift in Sources */,
 				D42F0BBF24BEBA0C009AB5ED /* RequestCell.swift in Sources */,
-				D4FA869C24A9C7B5005E2177 /* LandingPageViewController.swift in Sources */,
-				D496F8C624AC2A5B001A0B74 /* WishlistViewController.swift in Sources */,
 				D4DC233524BC2D9200E6F331 /* TempAddItemViewController.swift in Sources */,
 				D496F8C124AC2A5B001A0B74 /* ItemTableViewCell.swift in Sources */,
 				D42F0BC424BEBA0C009AB5ED /* RequestItemTableViewCell.swift in Sources */,
@@ -361,7 +346,6 @@
 				D496F8C424AC2A5B001A0B74 /* Login.swift in Sources */,
 				D42F0BC024BEBA0C009AB5ED /* RequestInfoViewController.swift in Sources */,
 				D42F0BC224BEBA0C009AB5ED /* RequestItemViewController.swift in Sources */,
-				D42DF94724BE994300C12B38 /* WishlistDetailViewController.swift in Sources */,
 				D42F0BBB24BEBA0C009AB5ED /* RequestedItemsViewController.swift in Sources */,
 				D496F8BF24AC2A5B001A0B74 /* DonationViewController.swift in Sources */,
 			);
