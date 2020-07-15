@@ -19,6 +19,7 @@ class WishlistDetailViewController: UIViewController {
     @IBAction func redeemButtonPressed(_ sender: Any) {
     }
     
+    
     @IBAction func removeButtonPressed(_ sender: Any) {
         var viewControllers = self.navigationController?.viewControllers
         

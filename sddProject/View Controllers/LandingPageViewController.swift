@@ -129,16 +129,16 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
 //    }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            let item = self.itemList[indexPath.row]
-            self.itemList.remove(at: indexPath.row)
-            
-            DataManager.deleteItem(item)
-            
-            WishlistDataManager.deleteWishlistItem(item)
-            
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
+//        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+//            let item = self.itemList[indexPath.row]
+//            self.itemList.remove(at: indexPath.row)
+//
+//            DataManager.deleteItem(item)
+//
+//            WishlistDataManager.deleteWishlistItem(item)
+//
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//        }
         
         let favourite = UITableViewRowAction(style: .normal, title: "Favourite") { (action, indexPath) in
             let item = self.itemList[indexPath.row]
@@ -148,7 +148,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         favourite.backgroundColor = UIColor.blue
         
-        return [delete, favourite]
+        return [favourite]
     }
     
     override func didReceiveMemoryWarning() {

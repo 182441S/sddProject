@@ -130,6 +130,9 @@
                                 <rect key="frame" x="133" y="780" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Remove from Wishlist"/>
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="Kp8-Ny-Rhr" eventType="touchUpInside" id="utq-2l-vxD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
