@@ -73,7 +73,6 @@
 		D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D496F8B924AC2A5B001A0B74 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		D496F8BA24AC2A5B001A0B74 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D496F8BB24AC2A5B001A0B74 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D496F8BC24AC2A5B001A0B74 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D496F8CE24AC4106001A0B74 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -209,7 +208,6 @@
 				D43E168B24AC4D0200933FD9 /* Main.storyboard */,
 				D496F8CE24AC4106001A0B74 /* Profile.storyboard */,
 				D496F8B524AC2A40001A0B74 /* Donation.storyboard */,
-				D496F8BA24AC2A5B001A0B74 /* Login.storyboard */,
 				D4FA869D24A9CF04005E2177 /* Home.storyboard */,
 				D4DC9F3224AC38F900AF8CC5 /* Slide.xib */,
 				D417297B24B57B4900FE223F /* GoogleService-Info.plist */,
