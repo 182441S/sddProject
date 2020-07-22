@@ -89,6 +89,9 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.navigationItem.leftBarButtonItem?.isEnabled = false
         self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+        
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        self.navigationItem.rightBarButtonItem?.tintColor = .systemOrange
                 
     }
     
@@ -107,8 +110,10 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
                 if Auth.auth().currentUser != nil {
                     self.navigationItem.leftBarButtonItem?.isEnabled = true
                     self.navigationItem.leftBarButtonItem?.tintColor = .systemOrange
-                }
-            }
+                    
+                    self.navigationItem.rightBarButtonItem?.isEnabled = false
+                    self.navigationItem.rightBarButtonItem?.tintColor = .systemBackground
+                }            }
         }
     }
 
@@ -171,8 +176,12 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         do {
             try Auth.auth().signOut()
+            
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+            
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.navigationItem.rightBarButtonItem?.tintColor = .systemOrange
         }
         
         catch let err as NSError {
