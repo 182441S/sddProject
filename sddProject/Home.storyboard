@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" title="Home" id="Kzi-vk-ddn">
                         <barButtonItem key="rightBarButtonItem" title="Account" image="person" catalog="system" id="oLa-JQ-PDd">
                             <connections>
-                                <segue destination="Htg-5C-hbn" kind="show" id="1qw-PL-eHy"/>
+                                <segue destination="Htg-5C-hbn" kind="show" identifier="AccessAccount" id="1qw-PL-eHy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="2837.68115942029" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="7GL-Pf-Jbg">
             <objects>
-                <viewController id="Htg-5C-hbn" sceneMemberID="viewController">
+                <viewController id="Htg-5C-hbn" customClass="LoginViewController" customModule="sddProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYr-fq-I0V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
