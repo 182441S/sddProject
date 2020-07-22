@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" title="Home" id="Kzi-vk-ddn">
                         <barButtonItem key="rightBarButtonItem" title="Account" image="person" catalog="system" id="oLa-JQ-PDd">
                             <connections>
-                                <segue destination="Htg-5C-hbn" kind="show" identifier="AccessAccount" id="1qw-PL-eHy"/>
+                                <segue destination="Htg-5C-hbn" kind="show" identifier="AccountLogin" id="1qw-PL-eHy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -128,7 +128,7 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="register:" destination="Htg-5C-hbn" eventType="touchUpInside" id="fiB-w9-RgV"/>
-                                    <segue destination="7Fc-54-4i4" kind="show" id="Cz0-hK-426"/>
+                                    <segue destination="7Fc-54-4i4" kind="show" identifier="AccountRegister" id="Cz0-hK-426"/>
                                 </connections>
                             </button>
                         </subviews>
