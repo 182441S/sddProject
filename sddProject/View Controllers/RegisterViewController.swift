@@ -23,8 +23,6 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerAction(_ sender: Any) {
         
-        let home = LandingPageViewController()
-        
         if password.text != confirmPassword.text {
             
             let alertController = UIAlertController(title: "Password Invalid", message: "Please ensure both passwords are the same", preferredStyle: .alert)
@@ -41,7 +39,7 @@ class RegisterViewController: UIViewController {
                 (user, err) in
                 
                 if err == nil {
-                    self.present(home, animated: true, completion: nil)
+                    _ = self.navigationController?.popViewController(animated: true)
                 }
                 
                 else {

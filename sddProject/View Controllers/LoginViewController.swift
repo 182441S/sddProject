@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -19,7 +20,27 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func loginAction(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: email.text!, password: password.text!) {
+            
+            (user, err) in
+            
+            if err == nil {
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            
+            else {
+                let alertController = UIAlertController(title: "Error?@$!", message: err?.localizedDescription, preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
