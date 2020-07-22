@@ -58,7 +58,7 @@
                                 <action selector="logoutAction:" destination="4lp-Ph-E6r" id="OvC-54-0dh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Account" id="oLa-JQ-PDd">
+                        <barButtonItem key="rightBarButtonItem" title="Log In" id="oLa-JQ-PDd">
                             <connections>
                                 <segue destination="Htg-5C-hbn" kind="show" identifier="AccountLogin" id="1qw-PL-eHy"/>
                             </connections>

@@ -87,7 +87,29 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         loadItems()
         
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
+        self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+                
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        Auth.auth().addStateDidChangeListener {
+            
+            (user, err) in
+            
+            if err == nil {
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+            
+            else {
+                if Auth.auth().currentUser != nil {
+                    self.navigationItem.leftBarButtonItem?.isEnabled = true
+                    self.navigationItem.leftBarButtonItem?.tintColor = .systemOrange
+                }
+            }
+        }
     }
 
     func loadItems() {
@@ -149,6 +171,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         do {
             try Auth.auth().signOut()
+            self.tableView.reloadData()
         }
         
         catch let err as NSError {
