@@ -18,20 +18,9 @@
             <point key="canvasLocation" x="-179" y="461"/>
         </scene>
         <!--Home-->
-        <scene sceneID="s7X-BG-XUk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="97B-5N-VVM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="S7R-ex-mDm"/>
-                    <navigationItem key="navigationItem" id="cQN-aa-Pff"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q4u-qs-KdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="22" y="451"/>
-        </scene>
-        <!--Login-->
         <scene sceneID="mNw-2S-lvN">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="Yys-27-pFl" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" id="Yys-27-pFl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="4Cf-Wr-XmW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnW-Ne-atO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +59,6 @@
                     <connections>
                         <segue destination="Yys-27-pFl" kind="relationship" relationship="viewControllers" id="kdk-uY-7wO"/>
                         <segue destination="lt5-N9-wwi" kind="relationship" relationship="viewControllers" id="hCP-Ni-Oip"/>
-                        <segue destination="97B-5N-VVM" kind="relationship" relationship="viewControllers" id="383-jc-6zB"/>
                         <segue destination="fBb-wS-vP6" kind="relationship" relationship="viewControllers" id="S3w-hC-7gp"/>
                         <segue destination="80C-05-EDg" kind="relationship" relationship="viewControllers" id="p3s-FC-bOu"/>
                     </connections>
