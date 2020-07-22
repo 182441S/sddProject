@@ -8,5 +8,6 @@ target 'sddProject' do
   # Pods for sddProject
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
+pod 'Firebase/Auth'
 
 end

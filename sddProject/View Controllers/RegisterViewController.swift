@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -20,7 +21,41 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func registerAction(_ sender: Any) {
+        
+        let home = LandingPageViewController()
+        
+        if password.text != confirmPassword.text {
+            
+            let alertController = UIAlertController(title: "Password Invalid", message: "Please ensure both passwords are the same", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        else {
+            Auth.auth().createUser(withEmail: email.text!, password: password.text!) {
+                
+                (user, err) in
+                
+                if err == nil {
+                    self.present(home, animated: true, completion: nil)
+                }
+                
+                else {
+                    let alertController = UIAlertController(title: "Error?@$!", message: err?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                    
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

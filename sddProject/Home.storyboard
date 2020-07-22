@@ -192,6 +192,9 @@
                                 <rect key="frame" x="178" y="558" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerAction:" destination="7Fc-54-4i4" eventType="touchUpInside" id="6Z3-xR-zV3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
