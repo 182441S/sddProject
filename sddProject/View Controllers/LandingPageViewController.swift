@@ -171,7 +171,8 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         do {
             try Auth.auth().signOut()
-            self.tableView.reloadData()
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
         }
         
         catch let err as NSError {
