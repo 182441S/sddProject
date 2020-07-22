@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class LandingPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate
 {
@@ -144,4 +145,14 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func logoutAction(_ sender: Any) {
+        
+        do {
+            try Auth.auth().signOut()
+        }
+        
+        catch let err as NSError {
+            print("Cannot sign %@ out leh...", err)
+        }
+    }
 }

@@ -53,7 +53,12 @@
                         <viewLayoutGuide key="safeArea" id="NRZ-vq-vne"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Kzi-vk-ddn">
-                        <barButtonItem key="rightBarButtonItem" title="Account" image="person" catalog="system" id="oLa-JQ-PDd">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="VEe-9p-l3r">
+                            <connections>
+                                <action selector="logoutAction:" destination="4lp-Ph-E6r" id="OvC-54-0dh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Account" id="oLa-JQ-PDd">
                             <connections>
                                 <segue destination="Htg-5C-hbn" kind="show" identifier="AccountLogin" id="1qw-PL-eHy"/>
                             </connections>
@@ -318,6 +323,5 @@
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="house" catalog="system" width="64" height="54"/>
-        <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>
