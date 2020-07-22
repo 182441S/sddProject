@@ -38,7 +38,6 @@
 		D496F8D224AC4106001A0B74 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D496F8CE24AC4106001A0B74 /* Profile.storyboard */; };
 		D496F8D324AC4106001A0B74 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */; };
 		D4A745F824B2F2D0002385EE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */; };
-		D4DC233524BC2D9200E6F331 /* TempAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC233424BC2D9200E6F331 /* TempAddItemViewController.swift */; };
 		D4DC9F2F24AC388800AF8CC5 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC9F2E24AC388800AF8CC5 /* Slide.swift */; };
 		D4DC9F3324AC38F900AF8CC5 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DC9F3224AC38F900AF8CC5 /* Slide.xib */; };
 		D4FA868624A9C11C005E2177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA868524A9C11C005E2177 /* AppDelegate.swift */; };
@@ -79,7 +78,6 @@
 		D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		D4A745FA24B30627002385EE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		D4DC233424BC2D9200E6F331 /* TempAddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAddItemViewController.swift; sourceTree = "<group>"; };
 		D4DC9F2E24AC388800AF8CC5 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		D4DC9F3224AC38F900AF8CC5 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		D4EDE70824AC4A0B00E3600D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */,
 				D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */,
 				D496F8CF24AC4106001A0B74 /* ProfileViewController.swift */,
-				D4DC233424BC2D9200E6F331 /* TempAddItemViewController.swift */,
 				D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */,
 				D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */,
 				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
@@ -340,7 +337,6 @@
 			files = (
 				D42F0BBE24BEBA0C009AB5ED /* RequestedItems.swift in Sources */,
 				D42F0BBF24BEBA0C009AB5ED /* RequestCell.swift in Sources */,
-				D4DC233524BC2D9200E6F331 /* TempAddItemViewController.swift in Sources */,
 				D496F8C124AC2A5B001A0B74 /* ItemTableViewCell.swift in Sources */,
 				D42F0BC424BEBA0C009AB5ED /* RequestItemTableViewCell.swift in Sources */,
 				D496F8D324AC4106001A0B74 /* ProfileViewController.swift in Sources */,

@@ -61,12 +61,6 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
                 itemDetailViewController.item = item
             }
         }
-        
-        if (segue.identifier == "TempAddItem") {
-            let tempAddItemViewController = segue.destination as! TempAddItemViewController
-            let item = Item("", "", "", "", "")
-            tempAddItemViewController.item = item
-        }
     }
     
     var itemList : [Item] = []
