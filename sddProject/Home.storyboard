@@ -48,10 +48,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="onp-dc-wey">
-                                <rect key="frame" x="188" y="410" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NRZ-vq-vne"/>
@@ -64,7 +60,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="pageControl" destination="onp-dc-wey" id="osm-DA-NjD"/>
                         <outlet property="scrollView" destination="crt-aH-T3n" id="I8O-JQ-142"/>
                         <outlet property="tableView" destination="DfK-5w-mRS" id="Gb4-Rp-u02"/>
                     </connections>

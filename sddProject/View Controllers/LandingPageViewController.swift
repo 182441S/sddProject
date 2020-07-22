@@ -5,7 +5,6 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
 {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var pageControl: UIPageControl!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count
@@ -82,10 +81,6 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         
         let slides = createSlides()
         slideScrollView(slides: slides)
-        
-        pageControl.numberOfPages = slides.count
-        pageControl.currentPage = 0
-        view.bringSubviewToFront(pageControl)
         
 //        DataManager.createItemDatabase()
         
