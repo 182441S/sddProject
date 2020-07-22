@@ -111,9 +111,6 @@
                                 <rect key="frame" x="188" y="480" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="login:" destination="Htg-5C-hbn" eventType="touchUpInside" id="3H4-lb-pGa"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First time? Register down below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU7-KE-y4a">
                                 <rect key="frame" x="33" y="518" width="348" height="31"/>
@@ -127,8 +124,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <action selector="register:" destination="Htg-5C-hbn" eventType="touchUpInside" id="fiB-w9-RgV"/>
-                                    <segue destination="7Fc-54-4i4" kind="show" identifier="AccountRegister" id="Cz0-hK-426"/>
+                                    <segue destination="7Fc-54-4i4" kind="show" identifier="AccountRegister" id="RjU-dM-A0n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,18 +133,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="yCk-CP-4SX"/>
                     <connections>
-                        <outlet property="email" destination="kqR-WO-q4P" id="uES-ck-09h"/>
-                        <outlet property="password" destination="i3W-kX-aDc" id="XQd-Ll-FkT"/>
+                        <outlet property="email" destination="kqR-WO-q4P" id="efW-Yj-oE5"/>
+                        <outlet property="password" destination="i3W-kX-aDc" id="n6N-b0-37I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0x-di-OBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3802.898550724638" y="-1075.4464285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Zlz-aL-5Dz">
             <objects>
-                <viewController id="7Fc-54-4i4" sceneMemberID="viewController">
+                <viewController id="7Fc-54-4i4" customClass="RegisterViewController" customModule="sddProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iWp-fh-7SM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,15 +192,17 @@
                                 <rect key="frame" x="178" y="558" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
-                                <connections>
-                                    <action selector="login:" destination="Htg-5C-hbn" eventType="touchUpInside" id="bIj-uV-0QX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0Bh-ZZ-Cqd"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xa6-1h-wbZ"/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="fhb-CS-2St" id="gdv-YD-fQY"/>
+                        <outlet property="email" destination="qpw-Jm-PC4" id="nj2-vi-X3Z"/>
+                        <outlet property="password" destination="QR0-uk-yRm" id="NWR-aq-yCt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REa-Bu-BJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
