@@ -14,7 +14,7 @@ class WishlistDetailViewController: UIViewController {
     @IBOutlet weak var itemDescLabel: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
     
-    var item : Item?
+    var item : WishlistItem?
     
     @IBAction func redeemButtonPressed(_ sender: Any) {
     }

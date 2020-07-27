@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		067DDD71C81035F19051632C /* Pods_sddProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39FFEA350289C91FE9BA422E /* Pods_sddProject.framework */; };
 		D40EBAF424AC23AE00E4C30D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EBAF324AC23AE00E4C30D /* Item.swift */; };
+		D4168BC624CEB7000083A228 /* WishlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4168BC524CEB7000083A228 /* WishlistItem.swift */; };
 		D417296224B5520100FE223F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A745FA24B30627002385EE /* libsqlite3.tbd */; };
 		D417297624B55EDD00FE223F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417297524B55EDD00FE223F /* DataManager.swift */; };
 		D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D417297B24B57B4900FE223F /* GoogleService-Info.plist */; };
@@ -47,6 +48,7 @@
 		39FFEA350289C91FE9BA422E /* Pods_sddProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sddProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA33284A208AE05CD3B3E84 /* Pods-sddProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sddProject.release.xcconfig"; path = "Target Support Files/Pods-sddProject/Pods-sddProject.release.xcconfig"; sourceTree = "<group>"; };
 		D40EBAF324AC23AE00E4C30D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D4168BC524CEB7000083A228 /* WishlistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistItem.swift; sourceTree = "<group>"; };
 		D417297524B55EDD00FE223F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D417297B24B57B4900FE223F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D42DF94824BE99DD00C12B38 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D42DF94824BE99DD00C12B38 /* Request.swift */,
 				D4DC9F2E24AC388800AF8CC5 /* Slide.swift */,
 				D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */,
+				D4168BC524CEB7000083A228 /* WishlistItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				D40EBAF424AC23AE00E4C30D /* Item.swift in Sources */,
 				D417297624B55EDD00FE223F /* DataManager.swift in Sources */,
 				D4FA868824A9C11C005E2177 /* SceneDelegate.swift in Sources */,
+				D4168BC624CEB7000083A228 /* WishlistItem.swift in Sources */,
 				D45AAC8D24BEC21D00B8A54B /* WishlistDataManager.swift in Sources */,
 				D42F0BC024BEBA0C009AB5ED /* RequestInfoViewController.swift in Sources */,
 				D42F0BC224BEBA0C009AB5ED /* RequestItemViewController.swift in Sources */,

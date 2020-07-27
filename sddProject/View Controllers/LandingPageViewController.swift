@@ -7,6 +7,8 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView!
     
+    var wishlistItem = WishlistItem("", "", "", "", "", "")
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count
     }
@@ -64,6 +66,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     var itemList : [Item] = []
+    var wishlistItemList : [WishlistItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +116,8 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
                     
                     self.navigationItem.rightBarButtonItem?.isEnabled = false
                     self.navigationItem.rightBarButtonItem?.tintColor = .systemBackground
-                }            }
+                }
+            }
         }
     }
 
@@ -160,12 +164,25 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
         let favourite = UITableViewRowAction(style: .normal, title: "Favourite") { (action, indexPath) in
             let item = self.itemList[indexPath.row]
             
-            WishlistDataManager.insertOrReplaceWishlistItem(item)
+            let email = Auth.auth().currentUser?.email
+            
+            self.wishlistItem.itemID = item.itemID
+            self.wishlistItem.itemName = item.itemName
+            self.wishlistItem.itemDesc = item.itemDesc
+            self.wishlistItem.itemImage = item.itemImage
+            self.wishlistItem.itemQuantity = item.itemQuantity
+            self.wishlistItem.userID = email!
+            
+            WishlistDataManager.insertOrReplaceWishlistItem(self.wishlistItem)
         }
         
         favourite.backgroundColor = UIColor.blue
         
-        return [favourite]
+        if Auth.auth().currentUser != nil {
+            return [favourite]
+        }
+        
+        return nil
     }
     
     override func didReceiveMemoryWarning() {

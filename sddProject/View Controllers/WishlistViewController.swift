@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class WishlistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var itemList: [Item] = []
+    var itemList: [WishlistItem] = []
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadWishlist()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadWishlist()
+        if Auth.auth().currentUser != nil {
+            loadWishlist()
+        }
     }
     
     func loadWishlist()

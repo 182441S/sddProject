@@ -13,13 +13,13 @@ import FirebaseFirestoreSwift
 class WishlistDataManager: NSObject {
     static let db = Firestore.firestore()
     
-    static func loadWishlist(onComplete: (([Item]) -> Void)?)
+    static func loadWishlist(onComplete: (([WishlistItem]) -> Void)?)
     {
         db.collection("wishlist").getDocuments()
             {
                 (querySnapshot, err) in
                     
-                var wishlistList : [Item] = []
+                var wishlistList : [WishlistItem] = []
                 
                 if let err = err
                 {
@@ -29,7 +29,7 @@ class WishlistDataManager: NSObject {
                 {
                     for document in querySnapshot!.documents
                     {
-                        var item = try? document.data(as: Item.self) as! Item
+                        var item = try? document.data(as: WishlistItem.self) as! WishlistItem
                         
                         if item != nil
                         {
@@ -42,7 +42,7 @@ class WishlistDataManager: NSObject {
             }
     }
     
-    static func insertOrReplaceWishlistItem(_ item: Item)
+    static func insertOrReplaceWishlistItem(_ item: WishlistItem)
     {
         try? db.collection("wishlist").document(item.itemID).setData(from: item, encoder: Firestore.Encoder())
         {
@@ -59,7 +59,7 @@ class WishlistDataManager: NSObject {
         }
     }
     
-    static func deleteWishlistItem(_ item: Item)
+    static func deleteWishlistItem(_ item: WishlistItem)
     {
         db.collection("wishlist").document(item.itemID).delete()
             {
