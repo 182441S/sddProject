@@ -15,6 +15,8 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,6 +25,8 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
         if Auth.auth().currentUser != nil {
             self.navigationItem.leftBarButtonItem?.isEnabled = true
             self.navigationItem.leftBarButtonItem?.tintColor = .systemOrange
+            
+            self.label.isHidden = true
             
             self.tableView.isHidden = false
             
@@ -33,6 +37,8 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
             self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
             
             self.tableView.isHidden = true
+            
+            self.label.isHidden = false
         }
     }
     
@@ -92,6 +98,8 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
             self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
             
             self.tableView.isHidden = true
+            
+            self.label.isHidden = false
         }
         
         catch let err as NSError {
