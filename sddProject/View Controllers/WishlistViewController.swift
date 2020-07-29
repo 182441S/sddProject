@@ -56,7 +56,18 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
                 
                 self.itemList = wishlistListFromFirestore
                 
-                self.tableView.reloadData()
+                if self.itemList.isEmpty {
+                    self.tableView.isHidden = true
+                    
+                    self.label.isHidden = false
+                }
+                else {
+                    self.label.isHidden = true
+                    
+                    self.tableView.isHidden = false
+                    
+                    self.tableView.reloadData()
+                }
             }
     }
     
