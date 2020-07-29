@@ -24,6 +24,8 @@
 		D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42F0BC524BEBF77009AB5ED /* Request.storyboard */; };
 		D43E168A24AC4B8000933FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43E168924AC4B8000933FD9 /* Assets.xcassets */; };
 		D43E168C24AC4D0200933FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E168B24AC4D0200933FD9 /* Main.storyboard */; };
+		D43EDD6F24D132B400E86D77 /* DonationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EDD6E24D132B400E86D77 /* DonationDataManager.swift */; };
+		D43EDD7124D133EA00E86D77 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EDD7024D133EA00E86D77 /* Donation.swift */; };
 		D45A0B7124D128DF00D181CE /* RequestDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B7024D128DF00D181CE /* RequestDataManager.swift */; };
 		D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */; };
 		D45AAC8924BEC21000B8A54B /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */; };
@@ -62,6 +64,8 @@
 		D42F0BC524BEBF77009AB5ED /* Request.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
 		D43E168924AC4B8000933FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D43E168B24AC4D0200933FD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D43EDD6E24D132B400E86D77 /* DonationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDataManager.swift; sourceTree = "<group>"; };
+		D43EDD7024D133EA00E86D77 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		D45A0B7024D128DF00D181CE /* RequestDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataManager.swift; sourceTree = "<group>"; };
 		D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		D42DF94224BE957800C12B38 /* Data Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D43EDD6E24D132B400E86D77 /* DonationDataManager.swift */,
 				D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */,
 				D417297524B55EDD00FE223F /* DataManager.swift */,
 				D45A0B7024D128DF00D181CE /* RequestDataManager.swift */,
@@ -122,6 +127,7 @@
 		D42DF94324BE958E00C12B38 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D43EDD7024D133EA00E86D77 /* Donation.swift */,
 				D40EBAF324AC23AE00E4C30D /* Item.swift */,
 				D42F0BB524BEBA0B009AB5ED /* RequestCell.swift */,
 				D496F8BB24AC2A5B001A0B74 /* Register.swift */,
@@ -341,6 +347,7 @@
 				D42F0BC124BEBA0C009AB5ED /* RequestItemCell.swift in Sources */,
 				D496F8C324AC2A5B001A0B74 /* Register.swift in Sources */,
 				D42DF94924BE99DD00C12B38 /* Request.swift in Sources */,
+				D43EDD6F24D132B400E86D77 /* DonationDataManager.swift in Sources */,
 				D42F0BBC24BEBA0C009AB5ED /* RequestViewController.swift in Sources */,
 				D4FA868624A9C11C005E2177 /* AppDelegate.swift in Sources */,
 				D496F8C024AC2A5B001A0B74 /* LoginViewController.swift in Sources */,
@@ -354,6 +361,7 @@
 				D42F0BC024BEBA0C009AB5ED /* RequestInfoViewController.swift in Sources */,
 				D42F0BC224BEBA0C009AB5ED /* RequestItemViewController.swift in Sources */,
 				D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */,
+				D43EDD7124D133EA00E86D77 /* Donation.swift in Sources */,
 				D45CD0B924C7C705004B25D4 /* RegisterViewController.swift in Sources */,
 				D496F8BF24AC2A5B001A0B74 /* DonationViewController.swift in Sources */,
 			);
