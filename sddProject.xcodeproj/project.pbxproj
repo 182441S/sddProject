@@ -14,7 +14,6 @@
 		D417297624B55EDD00FE223F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417297524B55EDD00FE223F /* DataManager.swift */; };
 		D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D417297B24B57B4900FE223F /* GoogleService-Info.plist */; };
 		D42DF94924BE99DD00C12B38 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42DF94824BE99DD00C12B38 /* Request.swift */; };
-		D42F0BBB24BEBA0C009AB5ED /* RequestedItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */; };
 		D42F0BBC24BEBA0C009AB5ED /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */; };
 		D42F0BBE24BEBA0C009AB5ED /* RequestedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */; };
 		D42F0BBF24BEBA0C009AB5ED /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB524BEBA0B009AB5ED /* RequestCell.swift */; };
@@ -25,6 +24,7 @@
 		D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42F0BC524BEBF77009AB5ED /* Request.storyboard */; };
 		D43E168A24AC4B8000933FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43E168924AC4B8000933FD9 /* Assets.xcassets */; };
 		D43E168C24AC4D0200933FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E168B24AC4D0200933FD9 /* Main.storyboard */; };
+		D45A0B7124D128DF00D181CE /* RequestDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B7024D128DF00D181CE /* RequestDataManager.swift */; };
 		D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */; };
 		D45AAC8924BEC21000B8A54B /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */; };
 		D45AAC8B24BEC21700B8A54B /* WishlistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8A24BEC21700B8A54B /* WishlistDetailViewController.swift */; };
@@ -52,7 +52,6 @@
 		D417297524B55EDD00FE223F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D417297B24B57B4900FE223F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D42DF94824BE99DD00C12B38 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedItemsViewController.swift; sourceTree = "<group>"; };
 		D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedItems.swift; sourceTree = "<group>"; };
 		D42F0BB524BEBA0B009AB5ED /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		D42F0BC524BEBF77009AB5ED /* Request.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
 		D43E168924AC4B8000933FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D43E168B24AC4D0200933FD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D45A0B7024D128DF00D181CE /* RequestDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataManager.swift; sourceTree = "<group>"; };
 		D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		D45AAC8A24BEC21700B8A54B /* WishlistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistDetailViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +114,7 @@
 			children = (
 				D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */,
 				D417297524B55EDD00FE223F /* DataManager.swift */,
+				D45A0B7024D128DF00D181CE /* RequestDataManager.swift */,
 			);
 			path = "Data Managers";
 			sourceTree = "<group>";
@@ -126,8 +127,8 @@
 				D496F8BB24AC2A5B001A0B74 /* Register.swift */,
 				D42DF94824BE99DD00C12B38 /* Request.swift */,
 				D4DC9F2E24AC388800AF8CC5 /* Slide.swift */,
-				D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */,
 				D4168BC524CEB7000083A228 /* WishlistItem.swift */,
+				D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,13 +140,12 @@
 				D45AAC8824BEC21000B8A54B /* WishlistViewController.swift */,
 				D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */,
 				D4A745F724B2F2D0002385EE /* ItemDetailViewController.swift */,
-				D42F0BB124BEBA0B009AB5ED /* RequestedItemsViewController.swift */,
-				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
-				D42F0BB824BEBA0C009AB5ED /* RequestItemViewController.swift */,
-				D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */,
 				D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */,
 				D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */,
 				D45CD0B824C7C705004B25D4 /* RegisterViewController.swift */,
+				D42F0BB824BEBA0C009AB5ED /* RequestItemViewController.swift */,
+				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
+				D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -335,6 +335,7 @@
 				D42F0BBF24BEBA0C009AB5ED /* RequestCell.swift in Sources */,
 				D496F8C124AC2A5B001A0B74 /* ItemTableViewCell.swift in Sources */,
 				D42F0BC424BEBA0C009AB5ED /* RequestItemTableViewCell.swift in Sources */,
+				D45A0B7124D128DF00D181CE /* RequestDataManager.swift in Sources */,
 				D45AAC8B24BEC21700B8A54B /* WishlistDetailViewController.swift in Sources */,
 				D4A745F824B2F2D0002385EE /* ItemDetailViewController.swift in Sources */,
 				D42F0BC124BEBA0C009AB5ED /* RequestItemCell.swift in Sources */,
@@ -354,7 +355,6 @@
 				D42F0BC224BEBA0C009AB5ED /* RequestItemViewController.swift in Sources */,
 				D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */,
 				D45CD0B924C7C705004B25D4 /* RegisterViewController.swift in Sources */,
-				D42F0BBB24BEBA0C009AB5ED /* RequestedItemsViewController.swift in Sources */,
 				D496F8BF24AC2A5B001A0B74 /* DonationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

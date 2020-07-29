@@ -8,17 +8,43 @@
 
 import UIKit
 
-class RequestItemViewController: UIViewController,  UIPickerViewDelegate, UIPickerViewDataSource {
-
-    @IBOutlet weak var singlePicker: UIPickerView!
+class RequestItemViewController: UIViewController {
     
-    var pickerData : [String] = [
-        "Food",
-        "Clothing",
-        "Toiletries",
-        "Household Items",
-        "Others"
-    ]
+    @IBOutlet weak var itemName: UITextField!
+    @IBOutlet weak var itemDesc: UITextField!
+    @IBOutlet weak var itemCategory: UITextField!
+    @IBOutlet weak var itemQuantity: UITextField!
+        
+    @IBAction func requestButton(_ sender: Any) {
+        if itemName.text == "" || itemDesc.text == "" || itemCategory.text == "" || itemQuantity.text == "" {
+            let alert = UIAlertController (
+                title: "Please Enter All Fields",
+                message: "",
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        item!.itemName = itemName.text!
+        item!.itemDesc = itemDesc.text!
+        item!.itemCategory = itemCategory.text!
+        item!.itemQuantity = itemQuantity.text!
+        
+        RequestDataManager.insertOrReplaceItem(item!)
+        
+        let viewControllers = self.navigationController?.viewControllers
+        let parent = viewControllers?[0] as! RequestViewController
+        RequestDataManager.insertOrReplaceItem(item!)
+        parent.loadRequests()
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    var item : RequestedItems?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +52,5 @@ class RequestItemViewController: UIViewController,  UIPickerViewDelegate, UIPick
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    
-    @IBAction func requestButtonPressed(_ sender: Any) {
     }
 }

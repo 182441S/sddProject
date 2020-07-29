@@ -8,14 +8,18 @@
 
 import UIKit
 
-class RequestedItems: NSObject {
+class RequestedItems: Codable {
+    
     var itemName: String
     var itemCategory: String
-    var itemImage: String
+    var itemDesc: String
+    var itemQuantity: String
     
-    init(_ itemName: String, _ itemCategory: String, _ itemImage: String){
+    init(_ itemName: String, _ itemCategory: String, _ itemDesc: String, _ itemQuantity: String)
+    {
         self.itemName = itemName
         self.itemCategory = itemCategory
-        self.itemImage = itemImage
+        self.itemDesc = itemDesc
+        self.itemQuantity = itemQuantity
     }
 }

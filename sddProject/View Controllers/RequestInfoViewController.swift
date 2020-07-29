@@ -10,18 +10,18 @@ import UIKit
 
 class RequestInfoViewController: UIViewController {
 
-    @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemCategory: UILabel!
+    @IBOutlet weak var itemDesc: UILabel!
     
     var  itemList : RequestedItems?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        itemImage.image = UIImage(named: (itemList?.itemImage)!)
         itemName.text = itemList?.itemName
         itemCategory.text = itemList?.itemCategory
+        itemDesc.text = itemList?.itemDesc
         
         self.navigationItem.title = itemList?.itemName
     }

@@ -16,12 +16,26 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemList.append(RequestedItems("Name1", "Category1", "movie_oklahoma"))
-        itemList.append(RequestedItems("Name2", "Category2", "movie_superdad"))
+        
+        loadRequests()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadRequests()
+    }
+    
+    func loadRequests()
+    {
+        RequestDataManager.loadRequests()
+            {
+                requestListFromFirestore in
+                self.itemList = requestListFromFirestore
+                self.tableView.reloadData()
+            }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count   
+        return itemList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,20 +47,37 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.itemName.text = p.itemName
         cell.itemCategory.text = p.itemCategory
-        cell.itemImageView.image = UIImage(named: p.itemImage)
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let request = itemList[indexPath.row]
+            itemList.remove(at: indexPath.row)
+            
+            RequestDataManager.deleteItem(request)
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "ShowItemInfo"){
-            let detailViewController = segue.destination as! RequestInfoViewController
+        if (segue.identifier == "ShowItemInfo"){
+            let RequestInfoViewController = segue.destination as! RequestInfoViewController
+            
             let myIndexPath = self.tableView.indexPathForSelectedRow
             
             if(myIndexPath != nil){
                 let items = itemList[myIndexPath!.row]
-                detailViewController.itemList = items
+                RequestInfoViewController.itemList = items
             }
+        }
+        
+        if (segue.identifier == "RequestForItem"){
+            let RequestItemViewController = segue.destination as! RequestItemViewController
+            let item = RequestedItems("", "", "", "")
+            RequestItemViewController.item = item
         }
     }
     
