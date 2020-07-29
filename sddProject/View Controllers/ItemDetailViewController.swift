@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ItemDetailViewController: UIViewController {
 
@@ -42,8 +43,18 @@ class ItemDetailViewController: UIViewController {
     }
     
     @IBAction func addToCartPressed(_ sender: Any) {
+        if Auth.auth().currentUser == nil {
+            let alertController = UIAlertController(title: "Error!", message: "Please log in.", preferredStyle: .alert)
             
-        self.navigationController?.popViewController(animated: true)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            
+        }
     }
 }
 
