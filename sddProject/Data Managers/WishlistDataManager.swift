@@ -49,7 +49,7 @@ class WishlistDataManager: NSObject {
     
     static func insertOrReplaceWishlistItem(_ item: WishlistItem)
     {
-        try? db.collection("wishlist").document(item.itemID).setData(from: item, encoder: Firestore.Encoder())
+        try? db.collection("wishlist").document(item.uniqueID).setData(from: item, encoder: Firestore.Encoder())
         {
             err in
             
@@ -66,7 +66,7 @@ class WishlistDataManager: NSObject {
     
     static func deleteWishlistItem(_ item: WishlistItem)
     {
-        db.collection("wishlist").document(item.itemID).delete()
+        db.collection("wishlist").document(item.uniqueID).delete()
             {
                 err in
                 

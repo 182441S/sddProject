@@ -16,8 +16,9 @@ class WishlistItem: Codable {
     var itemImage : String
     var itemQuantity : String
     var userID : String
+    var uniqueID: String
     
-    init(_ itemID: String, _ itemName: String, _ itemDesc: String, _ itemImage: String, _ itemQuantity: String, _ userID: String)
+    init(_ itemID: String, _ itemName: String, _ itemDesc: String, _ itemImage: String, _ itemQuantity: String, _ userID: String, _ uniqueID: String)
     {
         self.itemID = itemID
         self.itemName = itemName
@@ -25,5 +26,6 @@ class WishlistItem: Codable {
         self.itemImage = itemImage
         self.itemQuantity = itemQuantity
         self.userID = userID
+        self.uniqueID = uniqueID
     }
 }

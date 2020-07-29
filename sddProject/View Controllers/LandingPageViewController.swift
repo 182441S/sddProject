@@ -7,7 +7,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView!
     
-    var wishlistItem = WishlistItem("", "", "", "", "", "")
+    var wishlistItem = WishlistItem("", "", "", "", "", "", "")
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count
@@ -39,7 +39,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     func slideScrollView(slides : [Slide]) {
         
-        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 450)
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 350)
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: 0)
         scrollView.isPagingEnabled = true
         
@@ -180,6 +180,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
             self.wishlistItem.itemImage = item.itemImage
             self.wishlistItem.itemQuantity = item.itemQuantity
             self.wishlistItem.userID = email!
+            self.wishlistItem.uniqueID = email! + ": " + item.itemID
             
             WishlistDataManager.insertOrReplaceWishlistItem(self.wishlistItem)
         }
