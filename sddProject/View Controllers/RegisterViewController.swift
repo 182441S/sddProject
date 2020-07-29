@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
                 (user, err) in
                 
                 if err == nil {
-                    _ = self.navigationController?.popViewController(animated: true)
+                    _ = self.navigationController?.popToRootViewController(animated: true)
                 }
                 
                 else {
