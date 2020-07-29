@@ -46,7 +46,10 @@ class ItemDetailViewController: UIViewController {
         if Auth.auth().currentUser == nil {
             let alertController = UIAlertController(title: "Error!", message: "Please log in.", preferredStyle: .alert)
             
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel)
+            { action -> Void in
+                self.navigationController?.popViewController(animated: true)
+            }
             
             alertController.addAction(defaultAction)
             
