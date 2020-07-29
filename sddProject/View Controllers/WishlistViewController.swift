@@ -21,8 +21,25 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         if Auth.auth().currentUser != nil {
+            self.navigationItem.leftBarButtonItem?.isEnabled = true
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemOrange
+            
+            self.tableView.isHidden = false
+            
             loadWishlist()
         }
+        else {
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+            
+            self.tableView.isHidden = true
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        
+        self.tableView.isHidden = true
     }
     
     func loadWishlist()
@@ -63,6 +80,22 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
                 let item = itemList[myIndexPath!.row]
                 detailViewController.item = item
             }
+        }
+    }
+    
+    
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+            
+            self.tableView.isHidden = true
+        }
+        
+        catch let err as NSError {
+            print("Cannot sign %@ out leh...", err)
         }
     }
 }

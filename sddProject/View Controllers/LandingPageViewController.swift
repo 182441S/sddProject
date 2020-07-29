@@ -101,6 +101,14 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if Auth.auth().currentUser == nil {
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+            
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.navigationItem.rightBarButtonItem?.tintColor = .systemOrange
+        }
+        
         Auth.auth().addStateDidChangeListener {
             
             (user, err) in

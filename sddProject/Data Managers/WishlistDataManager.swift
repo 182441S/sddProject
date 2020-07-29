@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseAuth
 
 class WishlistDataManager: NSObject {
     static let db = Firestore.firestore()
@@ -27,13 +28,17 @@ class WishlistDataManager: NSObject {
                 }
                 else
                 {
+                    var user = Auth.auth().currentUser?.email
+                    
                     for document in querySnapshot!.documents
                     {
                         var item = try? document.data(as: WishlistItem.self) as! WishlistItem
                         
                         if item != nil
                         {
-                            wishlistList.append(item!)
+                            if item?.userID == user {
+                                wishlistList.append(item!)
+                            }
                         }
                     }
                 }

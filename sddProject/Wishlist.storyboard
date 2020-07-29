@@ -73,6 +73,7 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="csQ-Ap-zuy" firstAttribute="leading" secondItem="4oM-lr-bJe" secondAttribute="leading" id="56u-jI-Og9"/>
                             <constraint firstItem="VNT-hK-pJU" firstAttribute="top" secondItem="csQ-Ap-zuy" secondAttribute="bottom" symbolic="YES" id="9bM-jp-7Gg"/>
@@ -85,7 +86,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4oM-lr-bJe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Wishlist" id="m9f-vW-Ek0"/>
+                    <navigationItem key="navigationItem" title="Wishlist" id="m9f-vW-Ek0">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="vWI-Du-OAa">
+                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="9Bw-B7-laV" id="juc-Qf-dcB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="VNT-hK-pJU" id="Uf3-pV-dBj"/>
                     </connections>
@@ -136,6 +144,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="89V-xh-9LM"/>
                     </view>
                     <navigationItem key="navigationItem" id="ia0-8K-uGK"/>
@@ -153,4 +162,5 @@
     <resources>
         <image name="3" width="275" height="183"/>
     </resources>
+    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
