@@ -13,6 +13,8 @@
 		D417296224B5520100FE223F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A745FA24B30627002385EE /* libsqlite3.tbd */; };
 		D417297624B55EDD00FE223F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D417297524B55EDD00FE223F /* DataManager.swift */; };
 		D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D417297B24B57B4900FE223F /* GoogleService-Info.plist */; };
+		D41C390224D7EC630021C92C /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41C390124D7EC630021C92C /* ShoppingCart.storyboard */; };
+		D41C390424D7EDD20021C92C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C390324D7EDD20021C92C /* CartViewController.swift */; };
 		D42DF94924BE99DD00C12B38 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42DF94824BE99DD00C12B38 /* Request.swift */; };
 		D42F0BBC24BEBA0C009AB5ED /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */; };
 		D42F0BBE24BEBA0C009AB5ED /* RequestedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */; };
@@ -53,6 +55,8 @@
 		D4168BC524CEB7000083A228 /* WishlistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistItem.swift; sourceTree = "<group>"; };
 		D417297524B55EDD00FE223F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D417297B24B57B4900FE223F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D41C390124D7EC630021C92C /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		D41C390324D7EDD20021C92C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D42DF94824BE99DD00C12B38 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		D42F0BB424BEBA0B009AB5ED /* RequestedItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedItems.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				D42F0BB824BEBA0C009AB5ED /* RequestItemViewController.swift */,
 				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
 				D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */,
+				D41C390324D7EDD20021C92C /* CartViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				D4DC9F3224AC38F900AF8CC5 /* Slide.xib */,
 				D417297B24B57B4900FE223F /* GoogleService-Info.plist */,
 				D4FA869524A9C11D005E2177 /* Info.plist */,
+				D41C390124D7EC630021C92C /* ShoppingCart.storyboard */,
 			);
 			path = sddProject;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */,
 				D496F8B624AC2A40001A0B74 /* Donation.storyboard in Resources */,
 				D45AAC8F24BEC25800B8A54B /* Wishlist.storyboard in Resources */,
+				D41C390224D7EC630021C92C /* ShoppingCart.storyboard in Resources */,
 				D43E168C24AC4D0200933FD9 /* Main.storyboard in Resources */,
 				D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */,
 				D43E168A24AC4B8000933FD9 /* Assets.xcassets in Resources */,
@@ -353,6 +360,7 @@
 				D496F8C024AC2A5B001A0B74 /* LoginViewController.swift in Sources */,
 				D45AAC8924BEC21000B8A54B /* WishlistViewController.swift in Sources */,
 				D4DC9F2F24AC388800AF8CC5 /* Slide.swift in Sources */,
+				D41C390424D7EDD20021C92C /* CartViewController.swift in Sources */,
 				D40EBAF424AC23AE00E4C30D /* Item.swift in Sources */,
 				D417297624B55EDD00FE223F /* DataManager.swift in Sources */,
 				D4FA868824A9C11C005E2177 /* SceneDelegate.swift in Sources */,
