@@ -159,9 +159,9 @@
 				D45AAC8624BEC1FD00B8A54B /* LandingPageViewController.swift */,
 				D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */,
 				D45CD0B824C7C705004B25D4 /* RegisterViewController.swift */,
+				D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */,
 				D42F0BB824BEBA0C009AB5ED /* RequestItemViewController.swift */,
 				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
-				D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

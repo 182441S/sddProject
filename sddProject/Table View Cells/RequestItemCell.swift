@@ -10,9 +10,9 @@ import UIKit
 
 class RequestItemCell: UITableViewCell {
     
-    @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemCategory: UILabel!
+    @IBOutlet weak var itemQuantity: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

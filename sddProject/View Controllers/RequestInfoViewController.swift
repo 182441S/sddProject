@@ -9,9 +9,10 @@
 import UIKit
 
 class RequestInfoViewController: UIViewController {
-
-    @IBOutlet weak var itemName: UILabel!
+    
+    @IBOutlet weak var itemName: UITextView!
     @IBOutlet weak var itemCategory: UILabel!
+    @IBOutlet weak var itemQuantity: UILabel!
     @IBOutlet weak var itemDesc: UILabel!
     
     var  itemList : RequestedItems?
@@ -21,9 +22,19 @@ class RequestInfoViewController: UIViewController {
         
         itemName.text = itemList?.itemName
         itemCategory.text = itemList?.itemCategory
+        itemQuantity.text = itemList?.itemQuantity
         itemDesc.text = itemList?.itemDesc
         
         self.navigationItem.title = itemList?.itemName
+    }
+    
+    @IBAction func acceptButtonPressed(_ sender: Any) {
+        
+        var viewControllers = self.navigationController?.viewControllers
+        let parent = viewControllers?[0] as! RequestViewController
+        RequestDataManager.deleteItem(itemList!)
+        parent.loadRequests()
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

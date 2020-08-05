@@ -37,7 +37,7 @@ class RequestDataManager: NSObject {
             err in if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document successfully added!")
+                print("Item successfully added!")
             }
         }
     }
@@ -47,7 +47,7 @@ class RequestDataManager: NSObject {
             err in if let err = err {
                 print("Error removing document: \(err)")
             } else {
-                print("Document successfully removed!")
+                print("Item Accepted!")
             }
         }
     }

@@ -8,12 +8,25 @@
 
 import UIKit
 
-class RequestItemViewController: UIViewController {
+class RequestItemViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemDesc: UITextField!
     @IBOutlet weak var itemCategory: UITextField!
     @IBOutlet weak var itemQuantity: UITextField!
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField.tag == 4 {
+            let allowedCharacters = "1234567890"
+            let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+            let typedCharacterSet = CharacterSet(charactersIn: string)
+            
+            return allowedCharacterSet.isSuperset(of: typedCharacterSet)
+        }
+        
+        return true
+    }
         
     @IBAction func requestButton(_ sender: Any) {
         if itemName.text == "" || itemDesc.text == "" || itemCategory.text == "" || itemQuantity.text == "" {
@@ -48,6 +61,8 @@ class RequestItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        itemQuantity.delegate = self
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

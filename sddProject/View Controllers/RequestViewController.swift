@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var requestButton: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     var itemList : [RequestedItems] = []
 
@@ -21,7 +24,31 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadRequests()
+        if Auth.auth().currentUser != nil {
+            
+            self.navigationItem.leftBarButtonItem?.isEnabled = true
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemOrange
+            
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.navigationItem.rightBarButtonItem?.tintColor = .systemOrange
+            
+            self.tableView.isHidden = false
+            self.requestButton.isHidden = false
+            self.label.isHidden = true
+            
+            loadRequests()
+        }
+        else {
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
+            
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+            self.navigationItem.rightBarButtonItem?.tintColor = .systemBackground
+            
+            self.tableView.isHidden = true
+            self.requestButton.isHidden = true
+            self.label.isHidden = false
+        }
     }
     
     func loadRequests()
@@ -47,19 +74,9 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.itemName.text = p.itemName
         cell.itemCategory.text = p.itemCategory
+        cell.itemQuantity.text = p.itemQuantity
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            let request = itemList[indexPath.row]
-            itemList.remove(at: indexPath.row)
-            
-            RequestDataManager.deleteItem(request)
-            
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,6 +95,21 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
             let RequestItemViewController = segue.destination as! RequestItemViewController
             let item = RequestedItems("", "", "", "")
             RequestItemViewController.item = item
+        }
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.tableView.isHidden = true
+            self.requestButton.isHidden = true
+            self.label.isHidden = false
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+        
+        catch let err as NSError {
+            print("Error signing out!", err)
         }
     }
     
