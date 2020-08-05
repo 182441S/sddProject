@@ -106,6 +106,17 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.label.isHidden = false
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = false
+            
+            let alert = UIAlertController (
+                title: "Successfully Logged Out!",
+                message: "",
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            return
         }
         
         catch let err as NSError {

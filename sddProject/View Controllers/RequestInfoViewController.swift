@@ -30,10 +30,20 @@ class RequestInfoViewController: UIViewController {
     
     @IBAction func acceptButtonPressed(_ sender: Any) {
         
+        let alert = UIAlertController (
+            title: "Item Request Successfully Accepted!",
+            message: "",
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
         var viewControllers = self.navigationController?.viewControllers
         let parent = viewControllers?[0] as! RequestViewController
         RequestDataManager.deleteItem(itemList!)
         parent.loadRequests()
+        
         self.navigationController?.popViewController(animated: true)
     }
     
