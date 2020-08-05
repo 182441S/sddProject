@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class WishlistDetailViewController: UIViewController {
 
@@ -16,9 +17,42 @@ class WishlistDetailViewController: UIViewController {
     
     var item : WishlistItem?
     
-    @IBAction func redeemButtonPressed(_ sender: Any) {
-    }
+    var cartItem = Item("", "", "", "", "")
     
+    @IBAction func addButtonPressed(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            let alertController = UIAlertController(title: "Success!", message: "Item added to cart successfully.", preferredStyle: .alert)
+            
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+            { action -> Void in
+                self.cartItem.itemName = self.item!.itemName
+                self.cartItem.itemDesc = self.item!.itemDesc
+                self.cartItem.itemID = self.item!.itemID
+                self.cartItem.itemImage = self.item!.itemImage
+                self.cartItem.itemQuantity = "1"
+                
+                CartDataManager.insertOrReplaceCartItem(self.cartItem)
+                
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            let alertController = UIAlertController(title: "Error!", message: "You are not logged in.", preferredStyle: .alert)
+            
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel)
+            { action -> Void in
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func removeButtonPressed(_ sender: Any) {
         let alertController = UIAlertController(title: "Confirm", message: "Are you sure you want to remove this item from your wishlist?", preferredStyle: .alert)

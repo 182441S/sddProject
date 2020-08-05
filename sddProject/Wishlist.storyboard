@@ -135,6 +135,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Add to Cart"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="Kp8-Ny-Rhr" eventType="touchUpInside" id="R7I-De-Sua"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-A8-SR2">
                                 <rect key="frame" x="133" y="780" width="149" height="30"/>
