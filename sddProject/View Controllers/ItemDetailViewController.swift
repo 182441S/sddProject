@@ -56,7 +56,20 @@ class ItemDetailViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         else {
+            let alertController = UIAlertController(title: "Success!", message: "Item added to cart successfully.", preferredStyle: .alert)
             
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+            { action -> Void in
+                self.item?.itemQuantity = "1"
+                
+                CartDataManager.insertOrReplaceCartItem(self.item!)
+                
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 }

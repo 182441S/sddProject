@@ -111,6 +111,14 @@ class WishlistViewController: UIViewController, UITableViewDelegate, UITableView
             self.tableView.isHidden = true
             
             self.label.isHidden = false
+            
+            let alertController = UIAlertController(title: nil, message: "You have logged out successfully.", preferredStyle: .alert)
+            
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
         
         catch let err as NSError {

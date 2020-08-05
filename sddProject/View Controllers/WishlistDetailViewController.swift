@@ -21,15 +21,28 @@ class WishlistDetailViewController: UIViewController {
     
     
     @IBAction func removeButtonPressed(_ sender: Any) {
-        var viewControllers = self.navigationController?.viewControllers
+        let alertController = UIAlertController(title: "Confirm", message: "Are you sure you want to remove this item from your wishlist?", preferredStyle: .alert)
         
-        let parent = viewControllers?[0] as! WishlistViewController
+        let remove: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+        { action -> Void in
+            let viewControllers = self.navigationController?.viewControllers
+            
+            let parent = viewControllers?[0] as! WishlistViewController
+            
+            WishlistDataManager.deleteWishlistItem(self.item!)
+            
+            parent.loadWishlist()
+            
+            self.navigationController?.popViewController(animated: true)
+        }
         
-        WishlistDataManager.deleteWishlistItem(item!)
+        let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
         
-        parent.loadWishlist()
+        alertController.addAction(remove)
         
-        self.navigationController?.popViewController(animated: true)
+        alertController.addAction(cancel)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

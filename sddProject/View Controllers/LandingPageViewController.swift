@@ -208,6 +208,14 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
             
             self.navigationItem.rightBarButtonItem?.isEnabled = true
             self.navigationItem.rightBarButtonItem?.tintColor = .systemOrange
+            
+            let alertController = UIAlertController(title: nil, message: "You have logged out successfully.", preferredStyle: .alert)
+            
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
         
         catch let err as NSError {
