@@ -119,6 +119,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         do {
             try Auth.auth().signOut()
             
+            for i in 0 ..< cartList.count {
+                CartDataManager.deleteCartItem(cartList[i])
+            }
+            
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             self.navigationItem.leftBarButtonItem?.tintColor = .systemBackground
             

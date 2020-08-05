@@ -174,7 +174,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
             
             let email = Auth.auth().currentUser?.email
             
-            let alertController = UIAlertController(title: "Confirm", message: "Are you sure you want to add this item to your wishlist?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Success!", message: "Item added to wishlist successfully.", preferredStyle: .alert)
             
             let confirm: UIAlertAction = UIAlertAction(title: "OK", style: .default)
             { action -> Void in
@@ -189,11 +189,7 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
                 WishlistDataManager.insertOrReplaceWishlistItem(self.wishlistItem)
             }
             
-            let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
-            
             alertController.addAction(confirm)
-            
-            alertController.addAction(cancel)
             
             self.present(alertController, animated: true, completion: nil)
         }
