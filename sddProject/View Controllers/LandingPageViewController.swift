@@ -174,15 +174,28 @@ class LandingPageViewController: UIViewController, UITableViewDelegate, UITableV
             
             let email = Auth.auth().currentUser?.email
             
-            self.wishlistItem.itemID = item.itemID
-            self.wishlistItem.itemName = item.itemName
-            self.wishlistItem.itemDesc = item.itemDesc
-            self.wishlistItem.itemImage = item.itemImage
-            self.wishlistItem.itemQuantity = item.itemQuantity
-            self.wishlistItem.userID = email!
-            self.wishlistItem.uniqueID = email! + ": " + item.itemID
+            let alertController = UIAlertController(title: "Confirm", message: "Are you sure you want to add this item to your wishlist?", preferredStyle: .alert)
             
-            WishlistDataManager.insertOrReplaceWishlistItem(self.wishlistItem)
+            let confirm: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+            { action -> Void in
+                self.wishlistItem.itemID = item.itemID
+                self.wishlistItem.itemName = item.itemName
+                self.wishlistItem.itemDesc = item.itemDesc
+                self.wishlistItem.itemImage = item.itemImage
+                self.wishlistItem.itemQuantity = item.itemQuantity
+                self.wishlistItem.userID = email!
+                self.wishlistItem.uniqueID = email! + ": " + item.itemID
+                
+                WishlistDataManager.insertOrReplaceWishlistItem(self.wishlistItem)
+            }
+            
+            let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
+            
+            alertController.addAction(confirm)
+            
+            alertController.addAction(cancel)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
         
         favourite.backgroundColor = UIColor.blue
