@@ -37,7 +37,6 @@
 		D45AAC8D24BEC21D00B8A54B /* WishlistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */; };
 		D45AAC8F24BEC25800B8A54B /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45AAC8E24BEC25800B8A54B /* Wishlist.storyboard */; };
 		D45CD0B924C7C705004B25D4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45CD0B824C7C705004B25D4 /* RegisterViewController.swift */; };
-		D496F8B624AC2A40001A0B74 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D496F8B524AC2A40001A0B74 /* Donation.storyboard */; };
 		D496F8BF24AC2A5B001A0B74 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */; };
 		D496F8C024AC2A5B001A0B74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */; };
 		D496F8C124AC2A5B001A0B74 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F8B924AC2A5B001A0B74 /* ItemTableViewCell.swift */; };
@@ -48,6 +47,9 @@
 		D4FA868624A9C11C005E2177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA868524A9C11C005E2177 /* AppDelegate.swift */; };
 		D4FA868824A9C11C005E2177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA868724A9C11C005E2177 /* SceneDelegate.swift */; };
 		D4FA869E24A9CF04005E2177 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FA869D24A9CF04005E2177 /* Home.storyboard */; };
+		EC52DF6F24EB8EE100DE9084 /* DonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC52DF6E24EB8EE100DE9084 /* DonationTableViewController.swift */; };
+		EC52DF7124EB960F00DE9084 /* DonationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC52DF7024EB960F00DE9084 /* DonationViewCell.swift */; };
+		EC52DF7324EB9C2E00DE9084 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC52DF7224EB9C2E00DE9084 /* Donation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +83,6 @@
 		D45AAC8C24BEC21D00B8A54B /* WishlistDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistDataManager.swift; sourceTree = "<group>"; };
 		D45AAC8E24BEC25800B8A54B /* Wishlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
 		D45CD0B824C7C705004B25D4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		D496F8B524AC2A40001A0B74 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		D496F8B724AC2A5B001A0B74 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		D496F8B824AC2A5B001A0B74 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D496F8B924AC2A5B001A0B74 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +97,9 @@
 		D4FA868724A9C11C005E2177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4FA869524A9C11D005E2177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4FA869D24A9CF04005E2177 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EC52DF6E24EB8EE100DE9084 /* DonationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
+		EC52DF7024EB960F00DE9084 /* DonationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewCell.swift; sourceTree = "<group>"; };
+		EC52DF7224EB9C2E00DE9084 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		FB23D3387A469445A3A22178 /* Pods-sddProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sddProject.debug.xcconfig"; path = "Target Support Files/Pods-sddProject/Pods-sddProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +166,7 @@
 				D42F0BB224BEBA0B009AB5ED /* RequestViewController.swift */,
 				D42F0BB824BEBA0C009AB5ED /* RequestItemViewController.swift */,
 				D42F0BB624BEBA0B009AB5ED /* RequestInfoViewController.swift */,
+				EC52DF6E24EB8EE100DE9084 /* DonationTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				D42F0BB724BEBA0C009AB5ED /* RequestItemCell.swift */,
 				D42F0BBA24BEBA0C009AB5ED /* RequestItemTableViewCell.swift */,
 				D41C390524D7F45C0021C92C /* CartTableViewCell.swift */,
+				EC52DF7024EB960F00DE9084 /* DonationViewCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -215,11 +221,11 @@
 				D45AAC8E24BEC25800B8A54B /* Wishlist.storyboard */,
 				D41C390124D7EC630021C92C /* ShoppingCart.storyboard */,
 				D42F0BC524BEBF77009AB5ED /* Request.storyboard */,
+				EC52DF7224EB9C2E00DE9084 /* Donation.storyboard */,
 				D4FA868524A9C11C005E2177 /* AppDelegate.swift */,
 				D4FA868724A9C11C005E2177 /* SceneDelegate.swift */,
 				D4EDE70824AC4A0B00E3600D /* LaunchScreen.storyboard */,
 				D43E168B24AC4D0200933FD9 /* Main.storyboard */,
-				D496F8B524AC2A40001A0B74 /* Donation.storyboard */,
 				D4FA869D24A9CF04005E2177 /* Home.storyboard */,
 				D4DC9F3224AC38F900AF8CC5 /* Slide.xib */,
 				D417297B24B57B4900FE223F /* GoogleService-Info.plist */,
@@ -291,13 +297,13 @@
 			files = (
 				D4FA869E24A9CF04005E2177 /* Home.storyboard in Resources */,
 				D42F0BC624BEBF77009AB5ED /* Request.storyboard in Resources */,
-				D496F8B624AC2A40001A0B74 /* Donation.storyboard in Resources */,
 				D45AAC8F24BEC25800B8A54B /* Wishlist.storyboard in Resources */,
 				D41C390224D7EC630021C92C /* ShoppingCart.storyboard in Resources */,
 				D43E168C24AC4D0200933FD9 /* Main.storyboard in Resources */,
 				D417297C24B57B4900FE223F /* GoogleService-Info.plist in Resources */,
 				D43E168A24AC4B8000933FD9 /* Assets.xcassets in Resources */,
 				D4DC9F3324AC38F900AF8CC5 /* Slide.xib in Resources */,
+				EC52DF7324EB9C2E00DE9084 /* Donation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +364,7 @@
 				D45A0B7124D128DF00D181CE /* RequestDataManager.swift in Sources */,
 				D45AAC8B24BEC21700B8A54B /* WishlistDetailViewController.swift in Sources */,
 				D4A745F824B2F2D0002385EE /* ItemDetailViewController.swift in Sources */,
+				EC52DF7124EB960F00DE9084 /* DonationViewCell.swift in Sources */,
 				D42F0BC124BEBA0C009AB5ED /* RequestItemCell.swift in Sources */,
 				D496F8C324AC2A5B001A0B74 /* Register.swift in Sources */,
 				D42DF94924BE99DD00C12B38 /* Request.swift in Sources */,
@@ -375,6 +382,7 @@
 				D4168BC624CEB7000083A228 /* WishlistItem.swift in Sources */,
 				D45AAC8D24BEC21D00B8A54B /* WishlistDataManager.swift in Sources */,
 				D42F0BC024BEBA0C009AB5ED /* RequestInfoViewController.swift in Sources */,
+				EC52DF6F24EB8EE100DE9084 /* DonationTableViewController.swift in Sources */,
 				D42F0BC224BEBA0C009AB5ED /* RequestItemViewController.swift in Sources */,
 				D45AAC8724BEC1FD00B8A54B /* LandingPageViewController.swift in Sources */,
 				D43EDD7124D133EA00E86D77 /* Donation.swift in Sources */,
@@ -506,7 +514,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = sddProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,6 +524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nyp.sddProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,7 +537,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = sddProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nyp.sddProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -15,12 +15,13 @@ class Donation: Codable {
     var donationImage : String
     var donationQuantity : String
     
-//    init(_ donationID: String, _ donationName: String, _ donationImage: String, _ donationQuantity: String)
-//    {
-//        self.donationID = donationID
-//        self.donationName = donationName
-//        self.donationImage = donationImage
-//        self.donationQuantity = donationQuantity
-//    }
+    init(_ donationID: String, _ donationName: String, _ donationImage: String, _ donationQuantity: String)
+    {
+        self.donationID = donationID
+        self.donationName = donationName
+        self.donationImage = donationImage
+        self.donationQuantity = donationQuantity
+        
+    }
 
 }
