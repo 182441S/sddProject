@@ -145,6 +145,25 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         catch let err as NSError {
             print("Cannot sign %@ out leh...", err)
         }
+        
+        
+    }
+    
+    @IBAction func checkoutPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "Success", message: "You have checked out your cart!", preferredStyle: .alert)
+        
+        let defaultAction : UIAlertAction = UIAlertAction(title: "OK", style: .default)
+        { action -> Void in
+            for i in 0 ..< self.cartList.count {
+                CartDataManager.deleteCartItem(self.cartList[i])
+            }
+            
+            self.loadCart()
+        }
+        
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
