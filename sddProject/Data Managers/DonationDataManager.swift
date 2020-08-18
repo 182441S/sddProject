@@ -16,7 +16,8 @@ class DonationDataManager:NSObject
     
     static func loadDonations(onComplete: (([Donation]) -> Void)?) {
         db.collection("donations").getDocuments() {
-            (querySnapshot, err) in var donationList : [Donation] = []
+            (querySnapshot, err) in
+            var donationList : [Donation] = []
             
             if let err = err {
                 print("Error getting documents: \(err)")

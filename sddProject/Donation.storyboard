@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pKR-J5-rjR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pKR-J5-rjR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Donation View Controller-->
+        <!--Donation Table View Controller-->
         <scene sceneID="wth-hc-zc3">
             <objects>
-                <viewController id="9kD-5Y-NwT" customClass="DonationViewController" customModule="sddProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="caI-KK-x73" customClass="DonationViewController">
+                <viewController id="9kD-5Y-NwT" customClass="DonationTableViewController" customModule="sddProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="caI-KK-x73" customClass="DonationViewController" customModule="sddProject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="128" id="Dzd-0U-ENl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="128" id="Dzd-0U-ENl" customClass="DonationTableViewCell" customModule="sddProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dzd-0U-ENl" id="Jmg-fq-wGV">
@@ -47,6 +47,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="donationImage" destination="HKh-1R-ptX" id="VpG-Lv-yc9"/>
+                                            <outlet property="donationName" destination="jg8-Mt-nqy" id="pzX-8s-RuP"/>
+                                            <outlet property="donationQuantity" destination="hqB-eB-oCR" id="zMw-Hq-5D8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -58,7 +63,7 @@
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="DhQ-6x-vmQ">
                                             <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="6og-zv-0u3" kind="show" id="FAv-y2-l6k"/>
+                                                <segue destination="6og-zv-0u3" kind="show" id="ne9-b3-eFw"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -67,9 +72,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="f6r-7s-sep"/>
-                        <connections>
-                            <outlet property="DonationTable" destination="eHq-eE-hLR" id="kZR-6A-fqn"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="i2e-MM-H1l"/>
                 </viewController>
@@ -108,12 +110,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRk-HL-p0F">
-                                <rect key="frame" x="0.0" y="566" width="151" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIV-yU-biA">
                                 <rect key="frame" x="6" y="537" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,7 +132,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Donation"/>
                                 <connections>
-                                    <action selector="AddDonation:" destination="6og-zv-0u3" eventType="touchUpInside" id="O27-zi-v5i"/>
+                                    <action selector="AddDonation:" destination="6og-zv-0u3" eventType="touchUpInside" id="VtJ-ii-YXn"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-gM-cHO">
@@ -155,9 +151,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take a picture"/>
                                 <connections>
-                                    <action selector="takePicturePressed:" destination="6og-zv-0u3" eventType="touchUpInside" id="Hxb-jS-f8k"/>
+                                    <action selector="Takepicturebutton:" destination="6og-zv-0u3" eventType="touchUpInside" id="RWi-k8-Xao"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRk-HL-p0F">
+                                <rect key="frame" x="0.0" y="566" width="151" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Lk8-ck-CJe"/>
@@ -168,7 +170,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ItemInput" destination="YjO-GO-Ll6" id="6ag-rK-OVe"/>
+                        <outlet property="ItemInput" destination="YjO-GO-Ll6" id="D03-xP-OdE"/>
+                        <outlet property="QuantityInput" destination="uRk-HL-p0F" id="rIa-tf-3Ne"/>
+                        <outlet property="imageView" destination="9Ql-z6-alI" id="2U4-M6-8XL"/>
                         <outlet property="takePicture" destination="67v-Lk-lqJ" id="VJk-lM-nsR"/>
                     </connections>
                 </viewController>
@@ -187,35 +191,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9kD-5Y-NwT" kind="relationship" relationship="rootViewController" id="AyS-X6-e9R"/>
+                        <segue destination="9kD-5Y-NwT" kind="relationship" relationship="rootViewController" id="FO1-Me-unj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1Y-xo-R2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
-        </scene>
-        <!--Donation View Controller-->
-        <scene sceneID="5HG-6e-HaQ">
-            <objects>
-                <viewController id="ivI-VF-RUD" customClass="DonationViewController" customModule="sddProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KLK-Lh-EPD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cqp-wS-zNB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="XSM-5D-rlU"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="JHV-g5-Aj0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rFQ-xP-uBU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1478.2608695652175" y="781.47321428571422"/>
         </scene>
     </scenes>
 </document>
